@@ -1,3 +1,47 @@
+.download-section {
+    width: 100%;
+    padding: 12px 15px;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    background: #081326;
+    box-sizing: border-box;
+}
+
+.pdf-btn {
+    background-color: #0c3709;
+    color: #ffffff;
+
+    border: none;
+    border-radius: 5px;
+
+    padding: 10px 20px;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 42px;
+}
+
+.pdf-btn:hover {
+    background-color: #1d4ed8;
+}
+
+.pdf-btn:active {
+    transform: scale(0.98);
+}
+
+
 .pdf-btn { 
     background-color:#0c3709; 
     color:#fff; 

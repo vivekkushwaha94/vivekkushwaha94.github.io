@@ -1,15 +1,20 @@
- <!-- <button class="pdf-btn" onclick="window.print()">ExportVivek</button> -->
-<div>
-    <button
-    onclick="window.print()"
-    class="pdf-btn">
-    ExportVivek
-</button>
-<body>
+<div class="download-section">
+  <button
+    type="button"
+    class="pdf-btn"
+    (click)="exportPDF()">
+    Export Resume PDF
+  </button>
+</div>
 
-        <div class="resume-container">
+<!-- Resume -->
+<div class="resume-scroll">
 
-            <main class="resume">
+  <div
+    class="resume-container"
+    #resumeContainer>
+
+    <main class="resume">
 
                
 
@@ -454,6 +459,3 @@
             </main>
 
         </div>
-</body>
-
-</div>
