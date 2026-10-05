@@ -1,0 +1,747 @@
+/* =====================================================
+   GLOBAL BOX SIZING
+===================================================== */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   HOST
+===================================================== */
+
+:host {
+    display: block;
+
+    width: 100%;
+
+    min-height: 100%;
+}
+
+
+/* =====================================================
+   ABOUT PAGE
+===================================================== */
+
+.about-page {
+    width: 100%;
+
+    min-height: 100vh;
+
+    overflow-x: hidden;
+
+    background:
+        radial-gradient(
+            circle at 80% 10%,
+            rgba(24, 153, 226, 0.10),
+            transparent 25%
+        ),
+        linear-gradient(
+            135deg,
+            #081326,
+            #0c1930
+        );
+
+    color: #ffffff;
+}
+
+
+/* =====================================================
+   MAIN CONTAINER
+===================================================== */
+
+.about-container {
+    width: 100%;
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 60px 30px 70px;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.about-header {
+    width: 100%;
+
+    max-width: 850px;
+
+    margin-bottom: 55px;
+}
+
+
+.about-header h1 {
+    margin: 0 0 22px;
+
+    font-size: clamp(36px, 5vw, 62px);
+
+    line-height: 1.1;
+
+    letter-spacing: -2px;
+
+    font-weight: 750;
+
+    color: #ffffff;
+}
+
+
+.about-header h1 span {
+    color: #20bfff;
+}
+
+
+.intro {
+    margin: 0;
+
+    max-width: 780px;
+
+    color: #9db1cd;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   ABOUT CONTENT
+===================================================== */
+
+.about-content {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.4fr)
+        minmax(280px, 1fr);
+
+    gap: 55px;
+
+    margin-bottom: 60px;
+}
+
+
+/* =====================================================
+   ABOUT TEXT
+===================================================== */
+
+.about-text {
+    min-width: 0;
+}
+
+
+.about-text h2,
+.skills h2,
+.what-i-do h2 {
+    margin: 0 0 20px;
+
+    font-size: 28px;
+
+    line-height: 1.3;
+
+    color: #ffffff;
+}
+
+
+.about-text p {
+    margin: 0 0 17px;
+
+    color: #9db1cd;
+
+    font-size: 16px;
+
+    line-height: 1.75;
+}
+
+
+/* =====================================================
+   SKILLS
+===================================================== */
+
+.skills {
+    min-width: 0;
+}
+
+
+.skill-list {
+    width: 100%;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+}
+
+
+.skill {
+    padding: 9px 14px;
+
+    border-radius: 8px;
+
+    border: 1px solid #34445d;
+
+    background: #17253b;
+
+    color: #b9c8dc;
+
+    font-size: 14px;
+
+    line-height: 1.4;
+
+    transition: all 0.3s ease;
+}
+
+
+.skill:hover {
+    color: #20bfff;
+
+    border-color: #20bfff;
+
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   WHAT I DO
+===================================================== */
+
+.what-i-do {
+    width: 100%;
+
+    margin-bottom: 60px;
+}
+
+
+.what-i-do h2 {
+    margin-bottom: 25px;
+}
+
+
+.service-grid {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+
+/* =====================================================
+   SERVICE CARD
+===================================================== */
+
+.service-card {
+    width: 100%;
+
+    min-width: 0;
+
+    min-height: 220px;
+
+    padding: 25px;
+
+    border: 1px solid #34445d;
+
+    border-radius: 14px;
+
+    background: #16243a;
+
+    transition: all 0.3s ease;
+}
+
+
+.service-card:hover {
+    transform: translateY(-4px);
+
+    border-color: #20bfff;
+}
+
+
+.service-icon {
+    width: 45px;
+
+    height: 45px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background:
+        rgba(32, 191, 255, 0.10);
+
+    color: #20bfff;
+
+    font-size: 20px;
+
+    margin-bottom: 18px;
+}
+
+
+.service-card h3 {
+    margin: 0 0 10px;
+
+    font-size: 18px;
+
+    line-height: 1.4;
+
+    color: #ffffff;
+}
+
+
+.service-card p {
+    margin: 0;
+
+    color: #91a5c2;
+
+    font-size: 14px;
+
+    line-height: 1.65;
+}
+
+
+/* =====================================================
+   CONTACT CTA
+===================================================== */
+
+.about-cta {
+    width: 100%;
+
+    max-width: 100%;
+
+    padding: 40px 25px;
+
+    text-align: center;
+
+    border: 1px solid #34445d;
+
+    border-radius: 16px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(32, 191, 255, 0.08),
+            rgba(32, 191, 255, 0.02)
+        );
+}
+
+
+/* CTA Heading */
+
+.about-cta h2 {
+    margin: 0 0 12px;
+
+    font-size: 28px;
+
+    line-height: 1.3;
+
+    color: #ffffff;
+}
+
+
+/* CTA Description */
+
+.about-cta p {
+    margin: 0 0 24px;
+
+    color: #91a5c2;
+
+    font-size: 16px;
+
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   CONTACT BUTTON
+===================================================== */
+
+.contact-button {
+    width: 100%;
+
+    max-width: 100%;
+
+    min-height: 48px;
+
+    padding: 12px 20px;
+
+    box-sizing: border-box;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    border-radius: 8px;
+
+    border: none;
+
+    background: #29b8f3;
+
+    color: #061326;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+
+.contact-button:hover {
+    background: #42c5fa;
+
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   LARGE TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .about-container {
+        padding: 50px 25px 60px;
+    }
+
+
+    .about-content {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+
+    .service-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .about-container {
+        padding: 45px 22px 55px;
+    }
+
+
+    .about-header {
+        margin-bottom: 45px;
+    }
+
+
+    .about-header h1 {
+        font-size: 42px;
+
+        letter-spacing: -1.5px;
+    }
+
+
+    .intro {
+        font-size: 17px;
+    }
+
+
+    .about-content {
+        gap: 35px;
+
+        margin-bottom: 50px;
+    }
+
+
+    .about-text h2,
+    .skills h2,
+    .what-i-do h2 {
+        font-size: 26px;
+    }
+
+
+    .what-i-do {
+        margin-bottom: 50px;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 576px) {
+
+    .about-container {
+        width: 100%;
+
+        padding: 35px 18px 45px;
+    }
+
+
+    /* ---------------- HEADER ---------------- */
+
+    .about-header {
+        margin-bottom: 38px;
+    }
+
+
+    .about-header h1 {
+        margin-bottom: 18px;
+
+        font-size: 34px;
+
+        line-height: 1.15;
+
+        letter-spacing: -1px;
+    }
+
+
+    .intro {
+        font-size: 16px;
+
+        line-height: 1.6;
+    }
+
+
+    /* ---------------- ABOUT ---------------- */
+
+    .about-content {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 35px;
+
+        margin-bottom: 45px;
+    }
+
+
+    .about-text h2,
+    .skills h2,
+    .what-i-do h2 {
+        font-size: 24px;
+
+        margin-bottom: 16px;
+    }
+
+
+    .about-text p {
+        font-size: 15px;
+
+        line-height: 1.7;
+
+        margin-bottom: 15px;
+    }
+
+
+    /* ---------------- SKILLS ---------------- */
+
+    .skill-list {
+        gap: 8px;
+    }
+
+
+    .skill {
+        padding: 8px 12px;
+
+        font-size: 13px;
+    }
+
+
+    /* ---------------- SERVICES ---------------- */
+
+    .what-i-do {
+        margin-bottom: 45px;
+    }
+
+
+    .service-grid {
+        grid-template-columns: 1fr;
+
+        gap: 14px;
+    }
+
+
+    .service-card {
+        min-height: auto;
+
+        padding: 20px;
+    }
+
+
+    .service-icon {
+        width: 42px;
+
+        height: 42px;
+
+        margin-bottom: 14px;
+    }
+
+
+    .service-card h3 {
+        font-size: 17px;
+    }
+
+
+    .service-card p {
+        font-size: 14px;
+
+        line-height: 1.6;
+    }
+
+
+    /* ---------------- CTA ---------------- */
+
+    .about-cta {
+        width: 100%;
+
+        max-width: 100%;
+
+        padding: 28px 16px;
+    }
+
+
+    .about-cta h2 {
+        font-size: 22px;
+
+        line-height: 1.35;
+    }
+
+
+    .about-cta p {
+        font-size: 15px;
+
+        line-height: 1.6;
+
+        margin-bottom: 20px;
+    }
+
+
+    .contact-button {
+        width: 100%;
+
+        max-width: 100%;
+
+        min-height: 48px;
+
+        padding: 12px 15px;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE - 375px
+===================================================== */
+
+@media (max-width: 375px) {
+
+    .about-container {
+        padding: 30px 15px 40px;
+    }
+
+
+    .about-header h1 {
+        font-size: 31px;
+    }
+
+
+    .intro {
+        font-size: 15px;
+    }
+
+
+    .about-text p {
+        font-size: 14px;
+    }
+
+
+    .skill {
+        padding: 7px 10px;
+
+        font-size: 12px;
+    }
+
+
+    .service-card {
+        padding: 18px;
+    }
+
+
+    .about-cta {
+        padding: 25px 15px;
+    }
+
+
+    .about-cta h2 {
+        font-size: 21px;
+    }
+
+}
+
+
+/* =====================================================
+   VERY SMALL MOBILE - 320px
+===================================================== */
+
+@media (max-width: 320px) {
+
+    .about-container {
+        padding-left: 12px;
+
+        padding-right: 12px;
+    }
+
+
+    .about-header h1 {
+        font-size: 28px;
+    }
+
+
+    .about-text h2,
+    .skills h2,
+    .what-i-do h2 {
+        font-size: 22px;
+    }
+
+
+    .skill {
+        font-size: 11px;
+
+        padding: 6px 9px;
+    }
+
+
+    .about-cta {
+        padding-left: 12px;
+
+        padding-right: 12px;
+    }
+
+}

@@ -1,0 +1,484 @@
+/* ==============================
+   Global
+================================ */
+
+:host {
+    display: block;
+    width: 100%;
+    min-height: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.hero,
+.stats {
+    width: 100%;
+    overflow: hidden;
+}
+
+
+/* ==============================
+   HERO
+================================ */
+
+.hero {
+    position: relative;
+    min-height: 420px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 60px 20px;
+
+    background:
+        radial-gradient(
+            circle at 18% 25%,
+            rgba(24, 153, 226, 0.15),
+            transparent 24%
+        ),
+        radial-gradient(
+            circle at 85% 50%,
+            rgba(16, 107, 170, 0.12),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #081326,
+            #0c1930 55%,
+            #091427
+        );
+
+    border-bottom: 1px solid #26344c;
+}
+
+
+/* Decorative circle */
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 380px;
+    height: 380px;
+
+    border-radius: 50%;
+
+    left: -150px;
+    top: -80px;
+
+    background:
+        radial-gradient(
+            circle at 65% 40%,
+            #183b61,
+            #0a172b 70%
+        );
+
+    box-shadow:
+        0 0 80px rgba(28, 146, 219, 0.12);
+
+    opacity: 0.9;
+
+    pointer-events: none;
+}
+
+
+/* Decorative shape */
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 280px;
+    height: 280px;
+
+    right: -80px;
+    top: 90px;
+
+    background:
+        linear-gradient(
+            135deg,
+            transparent 30%,
+            rgba(24, 137, 204, 0.15),
+            transparent 70%
+        );
+
+    transform: rotate(-25deg);
+
+    pointer-events: none;
+}
+
+
+/* ==============================
+   HERO CONTAINER
+================================ */
+
+.hero-container {
+    width: 100%;
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+/* ==============================
+   HEADING
+================================ */
+
+.hero h1 {
+    margin: 0;
+
+    font-size: clamp(36px, 5vw, 68px);
+
+    line-height: 1.08;
+
+    letter-spacing: -2px;
+
+    font-weight: 750;
+
+    color: #ffffff;
+}
+
+.hero h1 .highlight {
+    color: #20c3ff;
+}
+
+
+/* ==============================
+   DESCRIPTION
+================================ */
+
+.hero-description {
+    margin: 20px 0 0;
+
+    max-width: 720px;
+
+    color: #9db1cd;
+
+    font-size: 18px;
+
+    line-height: 1.6;
+}
+
+
+/* ==============================
+   BUTTONS
+================================ */
+
+.buttons {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 14px;
+
+    margin-top: 28px;
+}
+
+
+.btn {
+    min-height: 46px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 11px 24px;
+
+    border-radius: 9px;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+
+.btn-primary {
+    background: #29b8f3;
+
+    color: #061326;
+
+    border: 1px solid #29b8f3;
+}
+
+
+.btn-primary:hover {
+    background: #42c5fa;
+
+    transform: translateY(-2px);
+}
+
+
+.btn-secondary {
+    color: #ffffff;
+
+    border: 1px solid #3a4b67;
+
+    background: transparent;
+}
+
+
+.btn-secondary:hover {
+    border-color: #20bfff;
+
+    color: #20bfff;
+
+    transform: translateY(-2px);
+}
+
+
+/* ==============================
+   STATS SECTION
+================================ */
+
+.stats {
+    width: 100%;
+
+    padding: 35px 20px;
+
+    background: #111d32;
+
+    border-bottom: 1px solid #26344c;
+}
+
+
+.stats-container {
+    width: 100%;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+
+/* ==============================
+   STAT CARD
+================================ */
+
+.stat-card {
+    width: 100%;
+
+    min-height: 110px;
+
+    padding: 20px;
+
+    border-radius: 14px;
+
+    border: 1px solid #394861;
+
+    background: #202d42;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    transition: all 0.3s ease;
+}
+
+
+.stat-card:hover {
+    transform: translateY(-3px);
+
+    border-color: #159edb;
+}
+
+
+.stat-number {
+    color: #20bfff;
+
+    font-size: 30px;
+
+    font-weight: 700;
+
+    margin-bottom: 5px;
+}
+
+
+.stat-title {
+    color: #9fb0c9;
+
+    font-size: 14px;
+}
+
+
+/* ==============================
+   TABLET
+================================ */
+
+@media (max-width: 768px) {
+
+    .hero {
+        min-height: auto;
+
+        padding: 50px 20px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+
+        letter-spacing: -1.5px;
+    }
+
+    .hero-description {
+        font-size: 17px;
+    }
+
+    .stats-container {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+
+        gap: 12px;
+    }
+
+    .stat-card {
+        min-height: 100px;
+
+        padding: 15px 10px;
+    }
+
+    .stat-number {
+        font-size: 26px;
+    }
+
+    .stat-title {
+        font-size: 13px;
+    }
+}
+
+
+/* ==============================
+   MOBILE
+================================ */
+
+@media (max-width: 576px) {
+
+    .hero {
+        min-height: auto;
+
+        padding: 40px 18px;
+    }
+
+
+    .hero h1 {
+        font-size: 34px;
+
+        line-height: 1.12;
+
+        letter-spacing: -1px;
+    }
+
+
+    .hero-description {
+        margin-top: 18px;
+
+        font-size: 16px;
+
+        line-height: 1.55;
+    }
+
+
+    /* Buttons become full width */
+
+    .buttons {
+        flex-direction: column;
+
+        width: 100%;
+
+        gap: 12px;
+
+        margin-top: 24px;
+    }
+
+
+    .btn {
+        width: 100%;
+
+        min-height: 48px;
+
+        padding: 12px 18px;
+    }
+
+
+    /* Stats become one column */
+
+    .stats {
+        padding: 25px 18px;
+    }
+
+
+    .stats-container {
+        grid-template-columns: 1fr;
+
+        gap: 14px;
+    }
+
+
+    .stat-card {
+        min-height: 90px;
+
+        padding: 18px;
+    }
+
+
+    .stat-number {
+        font-size: 28px;
+    }
+
+
+    .stat-title {
+        font-size: 14px;
+    }
+}
+
+
+/* ==============================
+   VERY SMALL MOBILE
+================================ */
+
+@media (max-width: 360px) {
+
+    .hero {
+        padding: 32px 15px;
+    }
+
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+
+    .stats {
+        padding: 20px 15px;
+    }
+}
